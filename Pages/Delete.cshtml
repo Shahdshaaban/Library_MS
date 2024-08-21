@@ -1,0 +1,12 @@
+@page
+@model UsersApp.Pages.DeleteModel
+@{  
+}
+
+<input hidden asp-for=@Model.b.Title type="text"/>
+<p>Are you sure that you want to delete @Model.b.Title</p>
+<form method="post">
+ <input class="delete-btn" type="submit" value="ok"/>
+
+
+</form>

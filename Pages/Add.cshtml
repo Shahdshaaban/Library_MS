@@ -1,0 +1,29 @@
+@page
+@model UsersApp.Pages.AddModel
+@{
+}
+
+ <form method="post" >
+        <div class="form-group">
+          <label for="exampleInputEmail1">Title</label>
+          <input type="text" class="form-control" id="inputtext" aria-describedby="emailHelp" placeholder="Enter the Book Title" asp-for="@Model.b.Title">
+        </div>
+
+      <div class="form-group">
+          <label for="exampleInputEmail1">Author</label>
+          <input type="text" class="form-control" id="inputtext" aria-describedby="emailHelp" placeholder="Enter the Book Author" asp-for="@Model.b.Author">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Genre</label>
+          <input type="text" class="form-control" id="inputtext" aria-describedby="emailHelp" placeholder="Enter the Book Genre" asp-for="@Model.b.Genre">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Publicarion Year</label>
+          <input type="text" class="form-control" id="inputtext" aria-describedby="emailHelp" placeholder="Enter the Book Publicarion Year" asp-for="@Model.b.Publication_year">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add</button>
+        
+  </form>

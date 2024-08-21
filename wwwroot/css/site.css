@@ -1,0 +1,82 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow:  #84087f;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.btn-secondery{
+  color: white;
+  background-color: #84087f;
+  margin-top: 7px;
+}
+btn-secondery:hover{
+  opacity: 0.8;
+  color: aliceblue;
+  background-color: aliceblue;
+}
+btn-secondery:active{
+  opacity: 2;
+  border: #84087f;
+}
+
+.text-center{
+  
+  border-radius: 20px;
+  padding-bottom: 50px; 
+  transition: box-shadow 0.3s ease; 
+}
+
+.text-center:hover,.text-center:focus{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  outline: none; 
+}
+
+.delete-btn{
+  background-color: #84087f;
+  width: 50px;
+  padding: 7px;
+  
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.delete-btn:hover{
+  opacity: 0.8;
+}
+
+.delete-btn:active{
+
+  opacity: 2;
+}
+
+.btn-primary{
+  background-color: #84087f;
+  width: 50px;
+  padding: 7px;
+  
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.btn-primary:hover{
+  background-color: #84087f;
+  opacity: 0.8;
+}

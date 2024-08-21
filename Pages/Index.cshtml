@@ -1,0 +1,53 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Genre</th>
+      <th scope="col">Publication Year</th>
+      <th scope="col">Borrowed</th>
+    </tr>
+  </thead>
+   <h1>Library MS</h1>
+   <br></br>
+  <tbody>
+ @{
+                foreach (var b in @Model.Books)
+                {
+                    <tr>
+                        <th scope="row">@b.Title</th>
+                        <td>@b.Author</td>
+                        <td>@b.Genre</td>
+                        <td>@b.Publication_year</td>
+                        <td>
+                            <form method="post" asp-page-handler="ToggleBorrowed">
+                                <input type="hidden" name="title" value="@b.Title" />
+                                <input type="checkbox" 
+                                       name="IsBorrowed" 
+                                       value="true" 
+                                       @(b.IsBorrowed ? "checked" : "") 
+                                       onchange="this.form.submit()" />
+                            </form>
+                        </td>
+                        <td>
+                            <a asp-page="/Read" asp-route-Title="@b.Title">Read</a>|
+                            <a asp-page="/Update" asp-route-Title="@b.Title">Update</a>|
+                            <a asp-page="/Delete" asp-route-Title="@b.Title">Delete</a>
+                        </td>
+                    </tr>
+        }
+
+        
+    }
+    
+    
+  </tbody>
+</table>
+</div>
